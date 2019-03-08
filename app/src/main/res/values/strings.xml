@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MicroPocket</string>
+    <string name="main_text">Microphone\nPocket\nEncyclopedia</string>
+
+    <!--Main Page-->
+    <string name="login">Log In</string>
+    <string name="guest">Guest</string>
+
+    <!--Sign Up-->
+
+    <!--Log In Page-->
+
+    <!--Home-->
+
+    <!--Micro List-->
+
+
+    <!--micro descriptions-->
+
+</resources>
+
