@@ -7,12 +7,23 @@
     <string name="guest">Guest</string>
 
     <!--Sign Up-->
+    <string name="tv_signUp">Sign Up</string>
+    <string name="name">Name:</string>
+    <string name="password">Password:</string>
+    <string name="email">EMail:</string>
+    <string name="btn_submit">SUBMIT</string>
 
     <!--Log In Page-->
 
     <!--Home-->
+    <string name="micro_brands">Microphone Brands</string>
+
 
     <!--Micro List-->
+    <string name="list_neumann">Neumann</string>
+    <string name="list_sennheiser">Sennheiser</string>
+    <string name="list_akg">AKG</string>
+
 
 
     <!--micro descriptions-->

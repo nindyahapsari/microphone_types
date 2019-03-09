@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/Background"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="92dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/tv_signUp"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_name"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_signup">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/input_text_name"
+            android:layout_width="350dp"
+            android:layout_height="55dp"
+            android:hint="@string/name"
+            android:lineSpacingExtra="20sp"
+            android:textAlignment="viewStart"
+            android:textSize="20sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/input_layout_name"
+        app:layout_constraintStart_toStartOf="@+id/input_layout_name"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_name">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/input_text_password"
+            android:layout_width="350dp"
+            android:layout_height="55dp"
+            android:hint="@string/password"
+            android:lineSpacingExtra="20sp"
+            android:textAlignment="viewStart"
+            android:textSize="20sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_email"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/input_layout_password"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_layout_password"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_password">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/input_text_email"
+            android:layout_width="350dp"
+            android:layout_height="55dp"
+            android:hint="@string/email"
+            android:lineSpacingExtra="20sp"
+            android:textAlignment="viewStart"
+            android:textSize="20sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_frame"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/btn_submit"
+        android:textSize="20sp"
+        android:backgroundTint="@color/greyish"
+        app:layout_constraintEnd_toEndOf="@+id/input_layout_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_layout_email"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_email" />
+
+
+</android.support.constraint.ConstraintLayout>
