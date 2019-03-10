@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button loginButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        loginButton = (Button) findViewById(R.id.btn_login);
 
 
 
@@ -28,6 +27,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        guestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 
