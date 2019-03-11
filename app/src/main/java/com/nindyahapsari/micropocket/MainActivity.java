@@ -3,11 +3,18 @@ package com.nindyahapsari.micropocket;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
+
+    private Button mGuestBtn, mLoginButton;
 
 
     @Override
@@ -16,10 +23,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        mLoginButton = (Button) findViewById(R.id.btn_login);
+        mGuestBtn = (Button) findViewById(R.id.btn_guest);
 
 
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -27,8 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        
 
-        guestButton.setOnClickListener(new View.OnClickListener() {
+        mGuestBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -36,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
 
     }

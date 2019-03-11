@@ -5,57 +5,57 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity{
+
+    public static final String TAG = "Home Activity";
+
 
     RecyclerView mRecyclerView;
-    ListAdapter listAdapter;
-    Context context;
+
+
+    ArrayList<Model> modelList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-
-        // set properties
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_home);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        mRecyclerView.setLayoutManager(layoutManager);
+        Log.d(TAG, "starting");
 
 
 
-        // adapter
-        listAdapter = new ListAdapter(this.getBrands());
-        mRecyclerView.setAdapter(listAdapter);
+        mRecyclerView = (RecyclerView) findViewById(R.id.rv_home);
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        modelList = new ArrayList<>();
 
+        modelList.add(new Model("Neumann", "Lorem ipsum dolor sit amet", "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam "));
+        modelList.add(new Model("Sennheiser", "Lorem ipsum dolor sit amet", "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"));
+        modelList.add(new Model("AKG", "Lorem ipsum dolor sit amet", "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"));
+        modelList.add(new Model("Mic 4", "Lorem ipsum dolor sit amet", "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"));
+        modelList.add(new Model("Mic 5", "Lorem ipsum dolor sit amet", "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"));
+        modelList.add(new Model("Mic 6", "Lorem ipsum dolor sit amet", "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"));
+        modelList.add(new Model("Mic 7", "Lorem ipsum dolor sit amet", "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"));
+        modelList.add(new Model("Mic 8", "Lorem ipsum dolor sit amet", "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"));
+        modelList.add(new Model("Mic 9", "Lorem ipsum dolor sit amet", "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"));
+        modelList.add(new Model("Mic 10", "Lorem ipsum dolor sit amet", "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"));
 
-    }
+        ListAdapter mAdapter = new ListAdapter(this, modelList);
+        mRecyclerView.setAdapter(mAdapter);
 
-    private ArrayList<Model> getBrands(){
-        ArrayList<Model> models = new ArrayList<>();
-
-        Model brand = new Model();
-        brand.setBrand("Neumann");
-        models.add(brand);
-
-        brand = new Model();
-        brand.setBrand("Sennheiser");
-        models.add(brand);
-
-        brand = new Model();
-        brand.setBrand("AKG");
-        models.add(brand);
-
-        return models;
 
 
     }
+
+
 
 }
