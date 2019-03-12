@@ -19,12 +19,10 @@
     <string name="micro_brands">Microphone Brands</string>
 
 
-
     <!--Micro List-->
     <string name="list_neumann">Neumann</string>
     <string name="list_sennheiser">Sennheiser</string>
     <string name="list_akg">AKG</string>
-
 
 
     <!--micro descriptions-->
