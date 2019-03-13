@@ -31,6 +31,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.HolderBrand> {
     @Override
     public HolderBrand onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
+        Log.d(TAG, "ViewHolder(HolderBrand): called");
+
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View view = inflater.inflate(R.layout.cardview_micro_home, null);
         return new HolderBrand(view);
@@ -43,6 +45,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.HolderBrand> {
     public void onBindViewHolder(@NonNull HolderBrand holder, int position) {
 
         Log.d(TAG, "onBindViewHolder: called");
+
+
 
         Model model = mListModel.get(position);
 
