@@ -23,49 +23,73 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_music_toggle"
-        android:layout_width="246dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="8dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="247dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/button_frame"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Music"
-        app:layout_constraintEnd_toEndOf="@+id/yv_brandName"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/yv_brandName"
-        app:layout_constraintTop_toBottomOf="@+id/yv_brandName" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yv_brandName">
+
+        <Button
+            android:id="@+id/btn_music_toggle"
+            android:layout_width="67dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Music"
+           />
+
+        <Button
+            android:id="@+id/btn_voice_toggle"
+            android:layout_width="67dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="70dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Voice"
+            />
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/btn_micro_1"
         android:layout_width="145dp"
         android:layout_height="145dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/button_frame"
         android:text="Microphone 1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_music_toggle" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
         android:id="@+id/btn_micro_2"
         android:layout_width="145dp"
         android:layout_height="145dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/button_frame"
         android:text="Microphone 2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toEndOf="@+id/btn_micro_1"
-        app:layout_constraintTop_toBottomOf="@+id/btn_music_toggle" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
         android:id="@+id/btn_micro_3"
         android:layout_width="145dp"
         android:layout_height="145dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/button_frame"
         android:text="Microphone 3"
         app:layout_constraintStart_toStartOf="@+id/btn_micro_1"
@@ -75,8 +99,8 @@
         android:id="@+id/btn_micro_4"
         android:layout_width="145dp"
         android:layout_height="145dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/button_frame"
         android:text="Micrphone 4"
         app:layout_constraintStart_toEndOf="@+id/btn_micro_3"
