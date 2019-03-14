@@ -23,6 +23,7 @@
     <string name="list_neumann">Neumann</string>
     <string name="list_sennheiser">Sennheiser</string>
     <string name="list_akg">AKG</string>
+    <string name="title_activity_first_micro">FirstMicroActivity</string>
 
 
     <!--micro descriptions-->

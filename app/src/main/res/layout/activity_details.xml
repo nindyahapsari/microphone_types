@@ -8,7 +8,7 @@
     tools:context=".DetailsActivity">
 
     <TextView
-        android:id="@+id/yv_brandName"
+        android:id="@+id/tv_brandName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -33,7 +33,7 @@
         android:background="@drawable/button_frame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yv_brandName">
+        app:layout_constraintTop_toBottomOf="@+id/tv_brandName">
 
         <Button
             android:id="@+id/btn_music_toggle"
